@@ -57,6 +57,8 @@ export default class Login extends Component {
           values.password = md5(values.password)
         } */
         values.password = md5(values.password)
+        console.log('values======>>', values)
+
         this.props.dispatch(login(values, (res) => {
           sessionStorage.setItem('token', res.data.token)
           sessionStorage.setItem('ticket', res.data.ticket)
